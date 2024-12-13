@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBoxLivro" alignment="CENTER_LEFT" style="-fx-background-color: #00BFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sysbiblioteca.controller.LivroController">
+    <children>
+        <Label fx:id="lbLivro" text="Listar Livros">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <ToolBar>
+            <items>
+                <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#onBtnNovoAction" prefHeight="25.0" prefWidth="60.0" text="Novo" />
+            </items>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </ToolBar>
+        <TableView fx:id="tbLivro" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="columnIdLivro" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="columnTituloLivro" prefWidth="75.0" text="Titulo" />
+                <TableColumn fx:id="columnAnoDeLancamentoLivro" maxWidth="222.0" prefWidth="75.0" text="Ano" />
+                <TableColumn fx:id="columnAutorLivro" prefWidth="75.0" text="Autor" />
+                <TableColumn fx:id="columnGeneroLivro" prefWidth="75.0" text="Gênero" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
